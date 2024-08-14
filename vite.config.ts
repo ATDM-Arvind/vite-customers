@@ -25,5 +25,11 @@ export default defineConfig({
   server: {
     host: "localhost",
     port: 4172
+  },
+  test: {
+    environment: 'jsdom',
+    globals:true,
+    setupFiles:'./src/_test_/setup.tsx',
+    css:true,
   }
 });

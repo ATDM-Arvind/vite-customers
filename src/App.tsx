@@ -41,7 +41,7 @@ export default function App() {
           :
           data?.map((user)=>{
             return (
-            <div className='users'>
+            <div className='users' key={user.id}>
                 <div id="detailSection">
                   <img src={user.avatar} className="profileImage"/>
                 </div>
