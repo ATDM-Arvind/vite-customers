@@ -5,7 +5,7 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'], // Add the extensions you use
     alias: {
-      "@acc/api": "http://localhost:4174/src/acc-api.ts"
+      "@acc/api": "http://arvind-api-vite.s3-website-us-east-1.amazonaws.com"
     }
   },
   build: {
@@ -26,10 +26,10 @@ export default defineConfig({
     host: "localhost",
     port: 4172
   },
-  test: {
-    environment: 'jsdom',
-    globals:true,
-    setupFiles:'./src/_test_/setup.tsx',
-    css:true,
-  }
+  // test: {
+  //   environment: 'jsdom',
+  //   globals:true,
+  //   setupFiles:'./src/_test_/setup.tsx',
+  //   css:true,
+  // }
 });
