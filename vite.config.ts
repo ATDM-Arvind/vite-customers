@@ -26,10 +26,15 @@ export default defineConfig({
     host: "localhost",
     port: 4172
   },
-  // test: {
-  //   environment: 'jsdom',
-  //   globals:true,
-  //   setupFiles:'./src/_test_/setup.tsx',
-  //   css:true,
-  // }
+  test: {
+    environment: 'jsdom',
+    globals:true,
+    setupFiles:'./src/_test_/setup.tsx',
+    css:true,
+    reporters: ['default'],
+    coverage: {
+      provider: 'istanbul', // or 'v8'
+      reporter: ['text', 'json', 'html'],
+    },
+  }
 });
